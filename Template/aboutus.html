@@ -1,0 +1,235 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content %}
+<style>
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Oswald');
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body
+{
+    scrollbar-color: black;
+}
+::-webkit-scrollbar
+{
+    width: 6px;
+}
+::-webkit-scrollbar-track
+{
+    /* box-shadow: inset 0 0 5px grey;  */
+    border-radius: 10px;
+    background: black;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: #FFD700;
+    border-radius: 40px;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: #FFD700;
+}
+.topnav
+{
+ background-color: rgba(0,0,0);
+ overflow: hidden;
+ position: fixed;
+ width: 100%;
+ top:0;
+}
+.topnav a
+{
+ float: left;
+ color: #FFD700;
+ text-align: left;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+ font-family: 'Oswald', sans-serif;
+}
+.topnav a:hover
+{
+ background-color: #FFD700;
+ color: black;
+}
+.topnav-right
+{
+  float: right;
+}
+.topnav-right a
+{
+  color: #FFFACD;
+}
+.topnav a.active
+{
+ background-color: #FFD700;
+ color: black;
+}
+.parallax1, .parallax2, .parallax3, .parallax4, .parallax5
+{
+ background-image: url('{% static '/images/cult.jpg' %}');
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ min-height: 400px;
+}
+.parallax1
+{
+  z-index: 4;
+}
+.parallax2
+{
+ background-image: url('{% static '/images/cult.jpg' %}');
+ min-height: 400px;
+}
+.parallax3
+{
+ background-image: url('{% static '/images/480579.jpg' %}');
+ min-height: 400px;
+}
+.parallax4
+{
+ background-image: url('https://giphy.com/gifs/animation-illustration-fitness-26BRq9PYFLeJl3WLu');
+ min-height: 350px;
+}
+.parallax5
+{
+ background-image: url('{% static '/images/about5.jpg' %}');
+ min-height: 300px;
+}
+.text1, .text2, .text3, .text4, .text5
+{
+ height: 400px;
+ padding-left: 5em;
+ padding-right: 5em;
+ padding-top: 2em;
+ border: 3px solid black;
+}
+.text2
+{
+ height: 2000px;
+ background-color: white;
+}
+.text3
+{
+ height: 500px;
+}
+.text4
+{
+ height: 250px;
+ background-color: white;
+}
+.text5
+{
+ height: 700px;
+}
+h
+{
+ font-family: 'Oswald', sans-serif;
+ font-size: 1.7em;
+}
+p
+{
+ font-family: 'EB Garamond', serif;
+ font-size: 1.3em;
+}
+#aqua
+{
+ border-bottom: 5px solid #00FFFF;
+ text-decoration: none;
+}
+#round
+{
+ height: 350px;
+ width: 400px;
+ border-radius:10%;
+ float: center;
+ padding-right: 1em;
+ padding-bottom: 1em;
+}
+.column
+{
+ width: 33.33%;
+ padding: 10px;
+ float: left;
+ height: 300px;
+}
+.row: after
+{
+ content: ''';
+ display: table;
+ clear: both;
+}
+li
+{
+ font-size: 1.2em;
+}
+</style>
+<body>
+
+
+<br>
+<div class="parallax1"></div>
+
+<div class="text1">
+<Center><h1>About Us</u></h1><br><br>
+    <p> <b>AT FITNESSO,</b> we strive to keep you fit & healthy through a range of<br>
+    holistic offerings that include fitness and yoga, healthy meals,<br>
+    mental wellbeing and primary care. Now anyone can now stay healthy<br>
+    from the safety of their homes with just a single app that helps you to<br>
+    <h2> #BeBetterEveryday</h2><br></p></div></Center>
+<div class="parallax2"  id="cast"></div>
+
+<div class="text2"><CENTER>
+<h1>Our Trainers</h1></CENTER>
+<br>
+<br>
+<br>
+<center>
+<img src="{% static '/images/img1.jpeg' %}" id="round">
+    <img src="{% static '/images/FEMALE.jpg' %}" id="round">
+    <H3>RISHABH & OLIVIA<BR> </H3>
+    <H5> MINDFUL </H5><BR>
+    <img src="{% static '/images/img4.jpeg' %}" id="round">
+    <img src="{% static '/images/img3.jpeg' %}" id="round">
+    <H3>ALYA & ARUN <BR> </H3>
+    <H5> YOGA </H5><BR>
+    <img  src="{% static '/images/img2.jpeg' %}"  id="round">
+    <img src="{% static '/images/img5.jpeg' %}" id="round">
+    <H3>NAVEEN & SPOORTHI  <BR> </H3>
+    <H5> CARDIO & STRENGTH  </H5><BR>
+    <img src="{% static '/images/img8.jpeg' %}"  id="round">
+    <img  src="{% static '/images/img9.jpeg' %}" id="round">
+    <H3>TOM & SIMRAN <BR> </H3>
+    <H5> DANCE FITNESS  </H5>
+</center>
+</div>
+<div class="parallax3"></div>
+<div class="text3">
+<h><u id="Black">Why Mental health important?</u></h><br><br>
+<p>Taking care of your mental health and well-being is a crucial part of living well, and here are some of the reasons why: 1. It helps you to handle and cope with stress and adversities. 2. It also allows you to build healthy relationships with other people and your community. 3. It promotes productivity, whether for work, sports, creative pursuits, or caregiving. 4. It keeps you physically healthy— mental health can affect your physical health. 5. It lets you realise your full potential.</p><br><br>
+<h><u id="black">More to know about our service</u></h>
+<br>
+<br>
+<iframe width="350" height="200" src="https://www.youtube.com/embed/v7AYKMP6rOE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>&emsp;<iframe width="350" height="200" src="https://www.youtube.com/embed/nQwKKCqkJxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+</div>
+</div>
+</div><center>
+<div class="parallax5"></div>
+<div class="text5">
+<h1>Posters</h1>
+
+<h>#Your life matters&#10084;</h>
+<br><br>
+<img style="height:500px;padding:10px;" src="https://media.giphy.com/media/26BRq9PYFLeJl3WLu/giphy.gif">
+<img style="height:500px;padding:10px;"  src="https://media.giphy.com/media/u3P8ktWNkjwOUTDnhi/giphy.gif">
+</div></center>
+</body>
+{% endblock %}

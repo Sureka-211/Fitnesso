@@ -1,0 +1,17 @@
+{% extends 'base_execrise.html' %}
+{% load static %}
+{% block content %}
+<br><br><br><br><br><br>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pangolin&family=Rampart+One&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<center>
+<b><h1 style="font-family: 'Pangolin', cursive;">Walk Fitness LIBRARY<br></h1></b>
+  <h4>Access our pre-recorded sessions, at your convenience</h4><br>
+{% for obj in listobj %}
+
+  <iframe width="900" height="400" src="{{obj.videolink}}">
+</iframe> <br><br><Br><br>
+  {% endfor %}
+  </center>
+{% endblock %}

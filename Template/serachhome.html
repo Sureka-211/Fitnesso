@@ -1,0 +1,80 @@
+{% extends 'base_food.html' %}
+{% load static %}
+{% block content %}
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<br><br><br><br><br><br>
+<link href='{% static "css/fontawesome.css" %}'>
+<link href='{% static "css/styles.css" %}' rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rampart+One&family=Satisfy&display=swap" rel="stylesheet">
+ <body style="background-image: url({% static 'IMAGES/bgfood.jpg' %}) ; background-size:100% ; " >
+ <div class="container" style="margin-bottom: 20px; background-color:white;" >
+ <center><h1 style="font-family: 'Rampart One', cursive; color:#150460;">Know Your Food?</h1>
+ <h2 style="font-family: 'Satisfy', cursive; color:tomato;">Understand how the food you’re eating contributes to your daily calories, macronutrients, and micronutrients.</h2></center>
+</div>
+<br>
+<div><center>
+    <form action="{% url 'searchresults' %}" method="post">
+        {% csrf_token %}
+    <input style="height:50px; width:500px; font-size:20px;border-radius: 25px;border: 2px solid #73AD21;padding: 20px;background: #D9EFD6;" type="text" placeholder="Search......." name="search">
+    <div class="search" ></div>
+    </form></center>
+</div>
+
+
+<br><br><Br><Br>
+{% if google %}
+ <div class="container" style="margin-bottom: 20px; padding:50px; background-color:white;" >
+
+  <div class="row">
+    <center><h1 style="font-family: 'Rampart One', cursive;">Your Results</h1></center>
+        <div class="justify-content-center">
+          {% for i,j,z in google %}
+         <h3 style="color:#14028F;">{{ i }}</h3>
+          <h4 style="color:orange;">({{ j }})</h4>
+          <h5>{{ z }}</h5>
+          <hr>
+        {% endfor %}
+        </div></div></div></div></body>
+{% endif %}
+{% endblock %}
